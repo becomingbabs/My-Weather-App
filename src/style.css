@@ -119,3 +119,11 @@ hr {
 #temp {
   font-size: 30px;
 }
+
+#open-source-link {
+  text-decoration: none;
+}
+
+#open-source-link:hover {
+  text-decoration: underline;
+}
