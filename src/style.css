@@ -1,1 +1,121 @@
 /** @format */
+
+.container {
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  opacity: 0.9;
+  height: 1200px;
+  margin: 100px auto;
+  max-width: 1000px;
+  border-radius: 50px;
+}
+
+img {
+  max-width: 280px;
+  height: 180px;
+  opacity: 0.6;
+  margin: 50px 0 0 425px;
+  border-radius: 15px;
+  display: block;
+  text-align: center;
+}
+
+.button {
+  font-size: 20px;
+  margin: 20px 0 0 10px;
+  opacity: 0.8;
+  border-radius: 10px;
+  transition: all 150ms ease-in-out;
+  background: transparent;
+  border: 1px solid rgb(85, 97, 102);
+}
+
+.button:hover {
+  color: white;
+  opacity: 0.8;
+  background: rgba(219, 184, 220, 0.8);
+  border: 1px solid white;
+}
+
+.quote {
+  text-align: center;
+  padding: 30px 0 0 0;
+  font-size: 25px;
+  margin: 15px 5px 5px 50px;
+  opacity: 0.7;
+  vertical-align: middle;
+}
+
+.form {
+  text-align: center;
+  margin: 50px 0 0 50px;
+  font-size: 30px;
+  word-spacing: 30px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+.my-city {
+  font-size: 40px;
+  margin: 0 0 0 75px;
+  text-align: center;
+  padding: 0px;
+  max-width: 305px;
+}
+
+.city-datos {
+  font-size: 25px;
+  text-align: center;
+  margin: 50px 0 0 0px;
+  opacity: 0.8;
+  vertical-align: middle;
+  line-height: 113px;
+  padding: 0px;
+  width: 260px;
+}
+
+.summer {
+  text-align: center;
+  margin: 50px 0 10px 120px;
+  border-radius: 50px;
+  width: 100px;
+  font-size: 60px;
+  opacity: 0.8;
+}
+
+.days {
+  text-align: center;
+  margin: 10px 10px 10px 50px;
+  width: 900px;
+  opacity: 0.8;
+  border-radius: 15px;
+  font-size: 30px;
+  word-spacing: 500px;
+  vertical-align: middle;
+  line-height: 75px;
+}
+
+.coded-by {
+  text-align: center;
+  margin: 50px 0 0 100px;
+}
+
+hr {
+  border: 1px solid rgba(221, 153, 221, 2);
+}
+
+.units {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#date {
+  text-align: center;
+  margin: 30px 0 0 0px;
+  opacity: 0.8;
+  font-size: 25px;
+  padding: 0px;
+}
+
+#temp {
+  font-size: 30px;
+}

@@ -5,12 +5,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Weather App by Babs</title>
   </head>
   <body>
-    <h1>Future Weather Project</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-5 form">
+          <form>
+            <input id="search-box" type="text" placeholder="Type City Here" />
+            <br />
+            <button
+              class="button"
+              id="search-button"
+              type="submit"
+              value="Search"
+            >
+              Search
+            </button>
+            <button class="button" id="current-button" type="submit">
+              Current Location
+            </button>
+          </form>
+        </div>
+        <div class="col-5 quote">
+          "There's no such thing as bad weather, only inappropriate
+          clothing."<br />- Sir Ranulph Fiennes
+        </div>
+      </div>
+      <hr />
 
-    <script src="index.js"></script>
+      <div class="row">
+        <div class="col-4 my-city">
+          <p id="current-city"></p>
+          <p id="date"></p>
+        </div>
+        <div class="col-4 city-datos">
+          <span id="temp"></span>
+          <span>
+            <a href="#" class="units" id="celsius-link"> °C </a>
+            |
+            <a href="#" class="units" id="fahrenheit-link"> °F </a>
+          </span>
+        </div>
+        <div class="col-4 summer">☀️</div>
+      </div>
+      <hr />
+
+      <div class="row days">
+        <div class="col-4">
+          Tues
+          <br />
+          Wed
+          <br />
+          Thurs
+          <br />
+          Fri
+          <br />
+          Sat
+          <br />
+          Sun
+        </div>
+        <div class="col-4">
+          5°L/30°H<br />
+          16°L/31°H <br />
+          11°L/32°H <br />
+          11°L/24°H <br />
+          12°L/26°H <br />
+          13°L/29°H
+        </div>
+        <div class="col-4">
+          🌤 <br />
+          ☀️ <br />
+          ☀️ <br />
+          🌥 <br />
+          ☀️ <br />
+          🌦
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-10 coded-by">
+          Coded by Barbara - 👩🏻‍💻 - Currently in Santiago, Chile
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 img">
+          <img src="https://i.gifer.com/Iu3.gif" alt="weather types" />
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
