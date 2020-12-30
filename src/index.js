@@ -22,15 +22,15 @@ let minutes = today.getMinutes();
 return `${fullDate} <br> ${hours}:${minutes}`;   
 } 
 
-
-
 // API Weather changes // 
 
  function showWeather(response) {
   console.log(response.data.name);
   document.querySelector("#current-city").innerHTML = response.data.name; 
   document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp); 
-
+  document.querySelector("#description").innerHTML = response.data.weather[0].description; 
+  document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   celsiusTemp = response.data.main.temp; 
 
   let showDate = document.querySelector("#date"); 

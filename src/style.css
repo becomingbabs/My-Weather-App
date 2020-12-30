@@ -5,24 +5,24 @@ body {
   background-size: cover;
 }
 
-hr {
-  border: 1px solid rgba(221, 153, 221, 2);
-}
-
 img {
   max-width: 200px;
   height: 140px;
   opacity: 0.8;
   margin: 30px 0 0 15px;
-  border-radius: 15px;
+  border-radius: 10px;
   display: block;
   text-align: center;
+}
+
+hr {
+  border: 1px solid rgba(221, 153, 221, 5);
 }
 
 .container {
   background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
   opacity: 0.95;
-  height: 700px;
+  height: 750px;
   margin: 100px auto;
   max-width: 1000px;
   border-radius: 50px;
@@ -73,31 +73,23 @@ img {
 }
 
 .current-info-row {
-  max-height: 100px;
+  height: 150px;
 }
 
 .current-city {
-  font-size: 25px;
-  margin: 0 0 0 50px;
+  font-size: 30px;
   text-align: center;
-  padding: 0px;
+  margin: 0px 0 0 50px;
 }
 
 .date-time {
-  text-align: center;
   opacity: 0.8;
   font-size: 15px;
-  opacity: 0.8;
-  padding: 0px;
 }
 
 .temp {
-  font-size: 20px;
-  text-align: center;
-  margin: 25px 0 0 10px;
-  opacity: 0.8;
-  padding: 0px;
-  max-width: 250px;
+  font-size: 30px;
+  margin: 15px 0 0 40px;
 }
 
 .units {
@@ -115,16 +107,20 @@ img {
   text-decoration: none;
 }
 
-.current-icon {
+.icon-description {
+  font-size: 25px;
   text-align: center;
-  font-size: 35px;
   opacity: 0.8;
+  padding: 30px 0 0 0;
+  margin: 0 0 0 15px;
+  width: 250px;
 }
 
-.description {
+.current-forecast {
   text-align: center;
-  margin: 25px 0 0 22px;
-  font-size: 18px;
+  margin: 25px 0 0 15px;
+  padding: 25px 0 0 0;
+  font-size: 20px;
   opacity: 0.8;
 }
 
@@ -145,6 +141,14 @@ img {
   margin: 30px 0 5px 100px;
   padding: 0;
   font-size: 15px;
+}
+
+#icon {
+  font-size: 40px;
+}
+
+#description:first-letter {
+  text-transform: capitalize;
 }
 
 #search-box {

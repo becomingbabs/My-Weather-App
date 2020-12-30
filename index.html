@@ -54,28 +54,22 @@
 
       <div class="row current-info-row">
         <div class="col-4 current-city">
-          <span id="current-city"></span>
-          <p class="date-time">
-            Last updated: <br />
-            <span id="date"></span>
-          </p>
-        </div>
-        <div class="col-4 temp">
-          <span class="temp" id="temp"></span>
-          <span>
+          <div id="current-city"></div>
+          <div class="date-time" id="date"></div>
+          <div class="temp">
+            <span id="temp"></span>
             <a href="#" class="units active" id="celsius-link"> °C </a>
             <span class="units">|</span>
             <a href="#" class="units" id="fahrenheit-link"> °F </a>
-            <br />
-            <span class="current-icon">☀️</span>
-          </span>
+          </div>
         </div>
-        <div class="col-4 description">
-          <p>
-            Precipitation: Rain
-            <br />
-            Humidity: 30%
-          </p>
+        <div class="col-4 icon-description">
+          <div id="icon">☀️</div>
+          <div id="description">Sunny</div>
+        </div>
+        <div class="col-4 current-forecast">
+          <div>Humidity: <span id="humidity"></span>%</div>
+          <div>Wind: <span id="wind"></span> km/h</div>
         </div>
       </div>
       <hr />
