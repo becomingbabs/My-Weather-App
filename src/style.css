@@ -1,8 +1,13 @@
 /** @format */
 
+body {
+  background-image: url("clouds.jpg");
+  background-size: cover;
+}
+
 .container {
   background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
-  opacity: 0.9;
+  opacity: 0.95;
   height: 1200px;
   margin: 100px auto;
   max-width: 1000px;
@@ -11,9 +16,9 @@
 
 img {
   max-width: 280px;
-  height: 180px;
+  height: 160px;
   opacity: 0.6;
-  margin: 50px 0 0 425px;
+  margin: 20px 0 0 425px;
   border-radius: 15px;
   display: block;
   text-align: center;
@@ -106,6 +111,12 @@ hr {
 .units {
   text-decoration: none;
   font-size: 20px;
+}
+
+.date-time {
+  text-align: center;
+  opacity: 0.8;
+  font-size: 25px;
 }
 
 #date {

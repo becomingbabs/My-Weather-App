@@ -11,6 +11,7 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -21,7 +22,7 @@
       <div class="row">
         <div class="col-5 form">
           <form>
-            <input id="search-box" type="text" placeholder="Type City Here" />
+            <input id="search-box" type="text" placeholder="Type City Here" autocomplete="off" />
             <br />
             <button
               class="button"
@@ -46,7 +47,7 @@
       <div class="row">
         <div class="col-4 my-city">
           <p id="current-city"></p>
-          <p id="date"></p>
+          <p class="date-time">Last updated: <div id="date"></div></p>
         </div>
         <div class="col-4 city-datos">
           <span id="temp"></span>
