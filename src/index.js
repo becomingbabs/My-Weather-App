@@ -1,15 +1,14 @@
 /* Get real time/date */ 
 
-function getDate(timestamp) {
+function dateTime(timestamp) {
 let today = new Date(timestamp); 
 
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 let day = days[today.getDay()]; 
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]; 
 let month = months[today.getMonth()]; 
-let date = today.getDate(); 
-let year = today.getFullYear(); 
-let fullDate = `${day}, ${month} ${date}, ${year}`; 
+let date = today.getDate();
+let fullDate = `${day}, ${month} ${date}`; 
 let hours = today.getHours(); 
 let minutes = today.getMinutes(); 
 
@@ -34,8 +33,8 @@ return `${fullDate} <br> ${hours}:${minutes}`;
 
   celsiusTemp = response.data.main.temp; 
 
-  let dateTime = document.querySelector("#date"); 
-  dateTime.innerHTML = getDate(response.data.dt * 1000);
+  let showDate = document.querySelector("#date"); 
+  showDate.innerHTML = dateTime(response.data.dt * 1000);
 }
 
 function search(city) {
@@ -45,27 +44,27 @@ function search(city) {
   axios.get(apiUrl).then(showWeather);
 }
 
-function citySubmit(event) {
+function cityEntered(event) {
   event.preventDefault();  
   let city = document.querySelector("#search-box").value; 
   search(city); 
 }
 
-function searchLocation(position) {
+function getCoords(position) {
   let apiKey = "6b9121d0e9ab077da17915a7fafe6157";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   console.log(apiUrl); 
   axios.get(apiUrl).then(showWeather);
 }
 
-function getCurrentLocation(event) {
+function searchLocation(event) {
   event.preventDefault(); 
-  navigator.geolocation.getCurrentPosition(searchLocation);
+  navigator.geolocation.getCurrentPosition(getCoords);
 }
 
 /*  Change between F to C */ 
 
-function unitChange(event) {
+function showFaren(event) {
   event.preventDefault();
   let farenheit = (celsiusTemp * 9/5) + 32; 
   celsiusLink.classList.remove("active");  
@@ -74,7 +73,7 @@ function unitChange(event) {
   changeUnit.innerHTML = Math.round(farenheit);
 }
 
- function changeBack(event) {
+ function showCels(event) {
   event.preventDefault(); 
   celsiusLink.classList.add("active");  
   farenheitLink.classList.remove("active");
@@ -85,16 +84,16 @@ function unitChange(event) {
 let celsiusTemp = null; 
 
 let button = document.querySelector("#search-button"); 
-button.addEventListener("click", citySubmit);
+button.addEventListener("click", cityEntered);
 
 let currentButton = document.querySelector("#current-button"); 
-currentButton.addEventListener("click", getCurrentLocation); 
+currentButton.addEventListener("click", searchLocation); 
 
 let farenheitLink = document.querySelector("#fahrenheit-link");
- farenheitLink.addEventListener("click", unitChange); 
+ farenheitLink.addEventListener("click", showFaren); 
 
 let celsiusLink = document.querySelector("#celsius-link");
- celsiusLink.addEventListener("click", changeBack); 
+ celsiusLink.addEventListener("click", showCels); 
 
 search("Santiago"); 
 

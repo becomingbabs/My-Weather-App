@@ -19,10 +19,15 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
+      <div class="row top-row">
         <div class="col-5 form">
           <form>
-            <input id="search-box" type="text" placeholder="Type City Here" autocomplete="off" />
+            <input
+              id="search-box"
+              type="text"
+              placeholder="Type City Here"
+              autocomplete="off"
+            />
             <br />
             <button
               class="button"
@@ -37,31 +42,45 @@
             </button>
           </form>
         </div>
-        <div class="col-5 quote">
+        <div class="col-3 img">
+          <img src="https://i.gifer.com/Iu3.gif" alt="weather types" />
+        </div>
+        <div class="col-3 quote">
           "There's no such thing as bad weather, only inappropriate
           clothing."<br />- Sir Ranulph Fiennes
         </div>
       </div>
       <hr />
 
-      <div class="row">
-        <div class="col-4 my-city">
-          <p id="current-city"></p>
-          <p class="date-time">Last updated: <div id="date"></div></p>
+      <div class="row current-info-row">
+        <div class="col-4 current-city">
+          <span id="current-city"></span>
+          <p class="date-time">
+            Last updated: <br />
+            <span id="date"></span>
+          </p>
         </div>
-        <div class="col-4 city-datos">
-          <span id="temp"></span>
+        <div class="col-4 temp">
+          <span class="temp" id="temp"></span>
           <span>
             <a href="#" class="units active" id="celsius-link"> °C </a>
-            |
+            <span class="units">|</span>
             <a href="#" class="units" id="fahrenheit-link"> °F </a>
+            <br />
+            <span class="current-icon">☀️</span>
           </span>
         </div>
-        <div class="col-4 summer">☀️</div>
+        <div class="col-4 description">
+          <p>
+            Precipitation: Rain
+            <br />
+            Humidity: 30%
+          </p>
+        </div>
       </div>
       <hr />
 
-      <div class="row days">
+      <div class="row daily-forecast">
         <div class="col-4">
           Tues
           <br />
@@ -103,11 +122,6 @@
             Open source code
           </a>
           by Barbara - 👩🏻‍💻 - Currently in Santiago, Chile
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-10 img">
-          <img src="https://i.gifer.com/Iu3.gif" alt="weather types" />
         </div>
       </div>
     </div>

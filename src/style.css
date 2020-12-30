@@ -5,30 +5,52 @@ body {
   background-size: cover;
 }
 
-.container {
-  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
-  opacity: 0.95;
-  height: 1200px;
-  margin: 100px auto;
-  max-width: 1000px;
-  border-radius: 50px;
+hr {
+  border: 1px solid rgba(221, 153, 221, 2);
 }
 
 img {
-  max-width: 280px;
-  height: 160px;
-  opacity: 0.6;
-  margin: 20px 0 0 425px;
+  max-width: 200px;
+  height: 140px;
+  opacity: 0.8;
+  margin: 30px 0 0 15px;
   border-radius: 15px;
   display: block;
   text-align: center;
 }
 
-.button {
-  font-size: 20px;
-  margin: 20px 0 0 10px;
+.container {
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  opacity: 0.95;
+  height: 700px;
+  margin: 100px auto;
+  max-width: 1000px;
+  border-radius: 50px;
+}
+
+.top-row {
+  height: 175px;
+}
+
+.form {
+  text-align: center;
+  margin: 50px 0 0 30px;
+  font-size: 25px;
+  word-spacing: 30px;
+  max-width: 400px;
   opacity: 0.8;
-  border-radius: 10px;
+}
+
+.img {
+  max-width: 200px;
+  height: 120px;
+}
+
+.button {
+  font-size: 15px;
+  margin: 30px 0 0 10px;
+  opacity: 0.8;
+  border-radius: 7px;
   transition: all 150ms ease-in-out;
   background: transparent;
   border: 1px solid rgb(85, 97, 102);
@@ -43,80 +65,45 @@ img {
 
 .quote {
   text-align: center;
-  padding: 30px 0 0 0;
-  font-size: 25px;
-  margin: 15px 5px 5px 50px;
+  padding: 0;
+  font-size: 20px;
+  margin: 40px 5px 10px 50px;
   opacity: 0.7;
   vertical-align: middle;
 }
 
-.form {
-  text-align: center;
-  margin: 50px 0 0 50px;
-  font-size: 30px;
-  word-spacing: 30px;
-  opacity: 0.8;
-  border-radius: 10px;
+.current-info-row {
+  max-height: 100px;
 }
 
-.my-city {
-  font-size: 40px;
-  margin: 0 0 0 75px;
-  text-align: center;
-  padding: 0px;
-  max-width: 305px;
-}
-
-.city-datos {
+.current-city {
   font-size: 25px;
+  margin: 0 0 0 50px;
   text-align: center;
-  margin: 50px 0 0 0px;
-  opacity: 0.8;
-  vertical-align: middle;
-  line-height: 113px;
   padding: 0px;
-  width: 260px;
-}
-
-.summer {
-  text-align: center;
-  margin: 50px 0 10px 120px;
-  border-radius: 50px;
-  width: 100px;
-  font-size: 60px;
-  opacity: 0.8;
-}
-
-.days {
-  text-align: center;
-  margin: 10px 10px 10px 50px;
-  width: 900px;
-  opacity: 0.8;
-  border-radius: 15px;
-  font-size: 30px;
-  word-spacing: 500px;
-  vertical-align: middle;
-  line-height: 75px;
-}
-
-.coded-by {
-  text-align: center;
-  margin: 50px 0 0 100px;
-}
-
-hr {
-  border: 1px solid rgba(221, 153, 221, 2);
-}
-
-.units {
-  text-decoration: none;
-  font-size: 20px;
 }
 
 .date-time {
   text-align: center;
   opacity: 0.8;
-  font-size: 25px;
+  font-size: 15px;
+  opacity: 0.8;
+  padding: 0px;
+}
+
+.temp {
+  font-size: 20px;
+  text-align: center;
+  margin: 25px 0 0 10px;
+  opacity: 0.8;
+  padding: 0px;
+  max-width: 250px;
+}
+
+.units {
+  text-decoration: none;
+  font-size: 15px;
+  vertical-align: top;
 }
 
 .active {
@@ -128,16 +115,41 @@ hr {
   text-decoration: none;
 }
 
-#date {
+.current-icon {
   text-align: center;
-  margin: 30px 0 0 0px;
+  font-size: 35px;
   opacity: 0.8;
-  font-size: 25px;
-  padding: 0px;
 }
 
-#temp {
-  font-size: 30px;
+.description {
+  text-align: center;
+  margin: 25px 0 0 22px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.daily-forecast {
+  text-align: center;
+  margin: 0 0 0 50px;
+  opacity: 0.8;
+  border-radius: 15px;
+  font-size: 20px;
+  word-spacing: 500px;
+  line-height: 50px;
+  max-height: 285px;
+  padding: 0;
+}
+
+.coded-by {
+  text-align: center;
+  margin: 30px 0 5px 100px;
+  padding: 0;
+  font-size: 15px;
+}
+
+#search-box {
+  border-radius: 5px;
+  border: 1px solid rgb(85, 97, 102);
 }
 
 #open-source-link {
