@@ -22,7 +22,7 @@ hr {
 .container {
   background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
   opacity: 0.95;
-  height: 750px;
+  height: 800px;
   margin: 100px auto;
   max-width: 1000px;
   border-radius: 50px;
@@ -120,24 +120,35 @@ hr {
   margin: 25px 0 0 15px;
   padding: 25px 0 0 0;
   font-size: 20px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
-.daily-forecast {
+h3 {
+  font-size: 15px;
+  margin: 0 auto;
+}
+
+#forecast {
   text-align: center;
-  margin: 0 0 0 50px;
   opacity: 0.8;
-  border-radius: 15px;
-  font-size: 20px;
-  word-spacing: 500px;
-  line-height: 50px;
-  max-height: 285px;
+  font-size: 15px;
+  margin: 0 auto;
+}
+
+.col-2 img {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+}
+
+.col-2 {
   padding: 0;
+  margin: 15px 0 15px 0;
 }
 
 .coded-by {
   text-align: center;
-  margin: 30px 0 5px 100px;
+  margin: 30px 0 0 100px;
   padding: 0;
   font-size: 15px;
 }
