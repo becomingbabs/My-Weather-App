@@ -78,6 +78,8 @@ let forecastElement = document.querySelector("#forecast");
   }
 }
 
+
+
 function search(city) {
   let apiKey = "6b9121d0e9ab077da17915a7fafe6157";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -87,12 +89,16 @@ function search(city) {
   console.log(apiForecast); 
   axios.get(apiForecast).then(displayForecast);
 
+  document.getElementById('search-box').value='';
+  celsiusLink.classList.add("active");  
+  farenheitLink.classList.remove("active");
+  
 }
 
 function cityEntered(event) {
   event.preventDefault();  
   let city = document.querySelector("#search-box").value; 
-  search(city); 
+  search(city);
 }
 
 /*  Change between F to C */ 
