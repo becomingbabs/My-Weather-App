@@ -31,6 +31,12 @@ return `${fullDate} <br> ${hours}:${minutes}`;
   document.querySelector("#description").innerHTML = response.data.weather[0].description; 
   document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+
+  let iconElement = document.querySelector('#icon'); 
+
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);  
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
   celsiusTemp = response.data.main.temp; 
 
   let showDate = document.querySelector("#date"); 
