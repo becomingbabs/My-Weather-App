@@ -29,11 +29,11 @@ let minutes = today.getMinutes();
   return `${hours}:${minutes}`; 
 }
 
-// API Weather changes // 
+// Showing weather * forecast // 
 
  function showWeather(response) {
   console.log(response.data.name);
-  document.querySelector("#current-city").innerHTML = response.data.name; 
+  document.querySelector("#current-city").innerHTML = response.data.name + ", <br>" + response.data.sys.country; 
   document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp); 
   document.querySelector("#description").innerHTML = response.data.weather[0].description; 
   document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
@@ -78,12 +78,13 @@ let forecastElement = document.querySelector("#forecast");
   }
 }
 
-
+// Searching City // 
 
 function search(city) {
   let apiKey = "6b9121d0e9ab077da17915a7fafe6157";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
+  console.log(apiUrl); 
 
   let apiForecast=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   console.log(apiForecast); 
@@ -97,7 +98,8 @@ function search(city) {
 
 function cityEntered(event) {
   event.preventDefault();  
-  let city = document.querySelector("#search-box").value; 
+  let city = document.querySelector("#search-box").value;  
+
   search(city);
 }
 
@@ -120,10 +122,29 @@ function showFaren(event) {
   changeUnit.innerHTML = Math.round(celsiusTemp);
 }
 
+
+// Current Location button //
+
+function getCoords(position) {
+  let apiKey = "6b9121d0e9ab077da17915a7fafe6157";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+function searchLocation(event) {
+  event.preventDefault(); 
+  navigator.geolocation.getCurrentPosition(getCoords);
+}
+
+// 
+
 let celsiusTemp = null; 
 
 let button = document.querySelector("#search-button"); 
 button.addEventListener("click", cityEntered);
+
+let currentButton = document.querySelector("#current-button"); 
+currentButton.addEventListener("click", searchLocation); 
 
 let farenheitLink = document.querySelector("#fahrenheit-link");
  farenheitLink.addEventListener("click", showFaren); 
@@ -132,4 +153,3 @@ let celsiusLink = document.querySelector("#celsius-link");
  celsiusLink.addEventListener("click", showCels); 
 
 search("Santiago"); 
-
