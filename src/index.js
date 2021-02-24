@@ -55,10 +55,10 @@ let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
 
-  for (let index = 0; index < 5; index++) {
+  for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
-    <div class="col-2">
+    <div class="col-sm">
       <h3>
         ${time(forecast.dt * 1000)}
       </h3>
