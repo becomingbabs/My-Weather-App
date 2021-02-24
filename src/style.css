@@ -125,7 +125,7 @@ h3 {
   margin: auto;
 }
 
-.col-sm {
+.col-6 .col-sm-4 .col-md-2 {
   margin: auto; 
   padding: 0; 
   display: block; 
