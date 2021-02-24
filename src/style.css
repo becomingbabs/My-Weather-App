@@ -6,49 +6,48 @@ body {
 }
 
 img {
-  max-width: 220px;
-  height: 160px;
-  opacity: 0.8;
-  margin: 20px 0 0 15px;
+  max-width: 50%; 
+  height: auto; 
   border-radius: 10px;
   display: block;
-  text-align: center;
+  margin: 10px auto auto auto;  
 }
 
 hr {
   border: 1px solid rgba(221, 153, 221, 5);
 }
 
+
+h3 {
+  font-size: 15px;
+  margin: 0 auto;
+}
+
 .container {
   background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
   opacity: 0.95;
-  height: 800px;
+  height: auto;
   margin: 100px auto;
   max-width: 1000px;
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
 .top-row {
-  height: 175px;
+  height: 215px;
 }
 
 .form {
   text-align: center;
-  margin: 50px 0 0 30px;
-  font-size: 25px;
-  word-spacing: 30px;
-  max-width: 400px;
+  font-size: 20px;
+  max-width: 350px;
+  height: auto; 
   opacity: 0.8;
-}
-
-.img {
-  max-width: 200px;
-  height: 120px;
+  margin: auto;
 }
 
 .button {
   font-size: 15px;
-  margin: 30px 0 0 10px;
+  margin: 10px auto; 
   opacity: 0.8;
   border-radius: 7px;
   transition: all 150ms ease-in-out;
@@ -65,11 +64,9 @@ hr {
 
 .quote {
   text-align: center;
-  padding: 0;
   font-size: 20px;
-  margin: 40px 5px 10px 50px;
   opacity: 0.7;
-  vertical-align: middle;
+  margin: auto; 
 }
 
 .current-info-row {
@@ -77,19 +74,19 @@ hr {
 }
 
 .current-city {
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
-  margin: 0px 0 0 50px;
+  margin: auto; 
 }
 
 .date-time {
-  opacity: 0.8;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .temp {
   font-size: 25px;
-  margin: 15px 0 0 40px;
+  padding: 5px 0 0 0; 
+  margin: auto; 
 }
 
 .units {
@@ -108,37 +105,23 @@ hr {
 }
 
 .icon-description {
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
-  opacity: 0.9;
-  margin: 0 0 0 15px;
-  width: 250px;
+  margin: auto; 
 }
 
 .current-forecast {
   text-align: center;
-  margin: 25px 0 0 15px;
-  padding: 25px 0 0 0;
-  font-size: 20px;
+  font-size: 25px;
   opacity: 0.9;
-}
-
-h3 {
-  font-size: 15px;
-  margin: 0 auto;
-}
-
-#forecast {
-  text-align: center;
-  opacity: 0.8;
-  font-size: 15px;
-  margin: 0 auto;
+  line-height: 1.5;
+  margin: auto;
 }
 
 .col-2 img {
   margin: 0 auto;
-  height: 100px;
-  width: 100px;
+  height: auto;
+  max-width: 100px;
   opacity: 0.7;
 }
 
@@ -149,9 +132,13 @@ h3 {
 
 .coded-by {
   text-align: center;
-  margin: 5px 0 0 100px;
-  padding: 0;
   font-size: 15px;
+  padding: 0 0 10px 0; 
+}
+
+#search-box {
+  border-radius: 5px;
+  border: 1px solid rgb(85, 97, 102);
 }
 
 #icon {
@@ -166,9 +153,11 @@ h3 {
   text-transform: capitalize;
 }
 
-#search-box {
-  border-radius: 5px;
-  border: 1px solid rgb(85, 97, 102);
+#forecast {
+  text-align: center;
+  opacity: 0.8;
+  font-size: 15px;
+  margin: 0 auto;
 }
 
 #open-source-link {
