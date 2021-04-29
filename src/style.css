@@ -1,76 +1,81 @@
 /** @format */
 
 body {
-  background-image: url("clouds.jpg");
-  background-size: cover;
+  background: rgb(80, 61, 46, 0.9);
+}
+
+.page-header {
+  font-size: 50px; 
+  text-align: center; 
+  margin: 0 0 50px 0; 
+  font-family: 'Righteous', cursive;
+}
+
+.container {
+  margin: 50px auto;
+  max-width: 1000px;
+  color: #ffffff; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  padding: 25px 10px;
+  border-radius: 30px; 
+  box-shadow: 0 10px 20px rgb(0 0 0 / 25%);
+  margin: 15px 0;
+  border: 2px solid #503D2E;
+  max-height: 300px; 
+}
+
+.top-row {
+  background: linear-gradient( to bottom, rgb(240, 236, 201, .6) 0%, rgb(231, 115, 79, .8)); 
+}
+
+.form {
+  text-align: center;
+  font-size: 25px;
+  max-width: 350px;
+  height: auto; 
+  margin: auto;
+}
+
+#search-box {
+  border-radius: 5px;
+  border: 1px solid #ffffff;
 }
 
 img {
-  max-width: 50%; 
+  max-width: 60%; 
   height: auto; 
   border-radius: 10px;
   display: block;
   margin: 10px auto auto auto;  
 }
 
-hr {
-  border: 1px solid rgba(221, 153, 221, 5);
-}
-
-
-h3 {
-  font-size: 15px;
-  margin: auto;
-}
-
-.container {
-  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
-  opacity: 0.95;
-  height: auto;
-  margin: 100px auto;
-  max-width: 1000px;
-  border-radius: 30px;
-}
-
-.top-row {
-  height: 215px;
-}
-
-.form {
-  text-align: center;
-  font-size: 20px;
-  max-width: 350px;
-  height: auto; 
-  opacity: 0.8;
-  margin: auto;
-}
-
-.button {
-  font-size: 15px;
-  margin: 10px auto; 
-  opacity: 0.8;
-  border-radius: 7px;
-  transition: all 150ms ease-in-out;
-  background: transparent;
-  border: 1px solid rgb(85, 97, 102);
-}
-
-.button:hover {
-  color: white;
-  opacity: 0.8;
-  background: rgba(219, 184, 220, 0.8);
-  border: 1px solid white;
-}
-
 .quote {
   text-align: center;
   font-size: 20px;
-  opacity: 0.7;
   margin: auto; 
 }
 
+.button {
+  font-size: 20px;
+  margin: 10px auto; 
+  border-radius: 7px;
+  transition: all 150ms ease-in-out;
+  background: rgb(80, 61, 46, .8);
+  border: 1px solid #ffffff;
+  color: #ffffff; 
+}
+
+.button:hover {
+  color: #503D2E;
+  background: #ffffff;
+  border: 1px solid #503D2E;
+}
+
 .current-info-row {
-  height: 175px;
+  background: linear-gradient( to bottom, rgb(240, 236, 201, .6) 0%, rgb(227, 167, 47, .8)); 
 }
 
 .current-city {
@@ -80,28 +85,44 @@ h3 {
 }
 
 .date-time {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .temp {
-  font-size: 25px;
+  font-size: 27px;
   padding: 5px 0 0 0; 
   margin: auto; 
 }
 
+a {
+  color: #503D2E; 
+}
+
+a:hover {
+  color: rgb(5, 135, 137);
+  font-weight: bold; 
+}
+
 .units {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 20px;
   vertical-align: top;
 }
 
 .active {
-  color: black;
+  color: #ffffff;
   cursor: default;
 }
 
 .active:hover {
-  text-decoration: none;
+  color: #ffffff; 
+}
+
+.icon {
+  margin: 0 auto;
+  height: auto;
+  opacity: 0.9; 
+  max-width: 100px; 
 }
 
 .icon-description {
@@ -110,18 +131,19 @@ h3 {
   margin: auto; 
 }
 
-.icon {
-  margin: 0 auto;
-  height: auto;
-  max-width: 100px;
-  opacity: 0.7;
+#description:first-letter {
+  text-transform: capitalize;
 }
 
 .current-forecast {
   text-align: center;
   font-size: 25px;
-  opacity: 0.9;
   line-height: 1.5;
+  margin: auto;
+}
+
+h3 {
+  font-size: 25px;
   margin: auto;
 }
 
@@ -131,34 +153,28 @@ h3 {
   display: block; 
 }
 
-.coded-by {
-  text-align: center;
-  font-size: 15px;
-  padding: 0 0 10px 0; 
-}
-
-#search-box {
-  border-radius: 5px;
-  border: 1px solid rgb(85, 97, 102);
-}
-
-#description:first-letter {
-  text-transform: capitalize;
-}
-
 #forecast {
   text-align: center;
-  opacity: 0.8;
-  font-size: 15px;
-  margin: 0 auto;
+  font-size: 25px;
   display: flex; 
   flex-wrap: wrap; 
+  background: linear-gradient( to bottom, rgb(240, 236, 201, .6) 0%, rgb(5, 135, 137, .7)); 
+}
+
+.coded-by {
+  text-align: center;
+  font-size: 20px;
+  padding: 0 0 10px 0; 
+  color: #ffffff; 
+  margin: 25px 0; 
 }
 
 #open-source-link {
   text-decoration: none;
+  color: rgb(227, 167, 47); 
 }
 
 #open-source-link:hover {
-  text-decoration: underline;
+  text-decoration: underline;  
+  color: #ffffff; 
 }

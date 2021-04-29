@@ -13,15 +13,24 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <title>Weather App by Babs</title>
+    <title>Retro Weather</title>
   </head>
   <body>
     <div class="container">
-      <div class="row top-row">
+      <header class="page-header">
+        <h1>
+          Retro Weather
+        </h1>
+        <h2>
+          Stay Cool. 
+        </h2>
+      </header>
+      <section class="row top-row">
         <div class="col form">
           <form>
             <input
@@ -52,18 +61,17 @@
           only inappropriate clothing."<br />
           - Sir Ranulph Fiennes
         </div>
-      </div>
-      <hr />
+      </section>
 
-      <div class="row current-info-row">
+      <section class="row current-info-row">
         <div class="col current-city">
           <div id="current-city"></div>
           <div class="date-time" id="date"></div>
           <div class="temp">
             <span id="temp"></span>
-            <a href="#" class="units active" id="celsius-link"> °C </a>
+              <a href="#" class="units active" id="celsius-link"> °C </a>
             <span class="units">|</span>
-            <a href="#" class="units" id="fahrenheit-link"> °F </a>
+              <a href="#" class="units" id="fahrenheit-link"> °F </a>
           </div>
         </div>
         <div class="col icon-description">
@@ -74,22 +82,23 @@
           <div>Humidity: <span id="humidity"></span>%</div>
           <div>Wind: <span id="wind"></span> km/h</div>
         </div>
-      </div>
-      <hr />
-      <div class="row daily-forecast no-gutters" id="forecast"></div>
-      <hr />
-      <div class="row">
+      </section>
+
+      <section class="row daily-forecast no-gutters" id="forecast"></section>
+      
+      <footer class="row">
         <div class="col coded-by">
           <a
             href="https://github.com/becomingbabs/my-weather-app"
             id="open-source-link"
             target="_blank"
           >
-            Open source code
+           <strong>Open source code</strong> 
           </a>
           by Barbara <br/>  👩🏻‍💻 <br/> Currently in Santiago, Chile
         </div>
-      </div>
+      </footer>
+
     </div>
     <script src="src/index.js"></script>
   </body>
